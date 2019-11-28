@@ -8,11 +8,11 @@
 	        </entree>
 	        <entree>
 	            <item>cappuccino</item>
-	            <price>3.5</price>
+	            <price>3.50</price>
 	        </entree>
 	        <entree>
 	            <item>Lovely Latter</item>
-	            <price>3.5</price>
+	            <price>3.50</price>
 	        </entree>
 	    </section>
 
@@ -24,7 +24,7 @@
 	        </entree>
 	        <entree>
 	            <item>Elderfloer cordial</item>
-	            <price>12</price>
+	            <price>12.00</price>
 	        </entree>
 	        <entree sales="true">
 	            <item>Virgn Marie</item>
@@ -50,7 +50,7 @@
 	        </entree>
 	        <entree vegetarian="true">
 	            <item>Sweet Potato Fries with yogurt</item>
-	            <price>8.5</price>
+	            <price>8.50</price>
 	        </entree>
 	    </section>
 	</coquitalbarmenu>
