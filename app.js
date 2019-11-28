@@ -40,8 +40,8 @@ router.get('/get/html', function(req, res) {
 
     res.writeHead(200, {'Content-Type': 'text/html'});
 
-    var xml = fs.readFileSync('PaddysCafe.xml', 'utf8');
-    var xsl = fs.readFileSync('PaddysCafe.xsl', 'utf8');
+    var xml = fs.readFileSync('coquitalbar.xml', 'utf8');
+    var xsl = fs.readFileSync('coquitalbar.xsl', 'utf8');
     var doc = xmlParse(xml);
     var stylesheet = xmlParse(xsl);
 
@@ -59,11 +59,11 @@ router.post('/post/json', function(req, res) {
   function appendJSON(obj) {
     console.log(obj);
     // Function to read in XML file, convert it to JSON, add a new object and write back to XML file
-    xmlFileToJs('PaddysCafe.xml', function(err, result) {
+    xmlFileToJs('coquitalbar.xml', function(err, result) {
       if (err) throw (err);
       result.cafemenu.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price});
       console.log(result);
-      jsToXmlFile('PaddysCafe.xml', result, function(err) {
+      jsToXmlFile('coquitalbar.xml', result, function(err) {
         if (err) console.log(err);
       })
     })

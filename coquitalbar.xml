@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+	
+	<coquitalbarmenu>
+	    <section name="coffees">
+	        <entree sales="true">
+	            <item>Americano</item>
+	            <price>3.00</price>
+	        </entree>
+	        <entree>
+	            <item>cappuccino</item>
+	            <price>3.5</price>
+	        </entree>
+	        <entree>
+	            <item>Lovely Latter</item>
+	            <price>3.5</price>
+	        </entree>
+	    </section>
+
+
+	    <section name="Coktails">
+	        <entree>
+	            <item>Old Fashion</item>
+	            <price>15.00</price>
+	        </entree>
+	        <entree>
+	            <item>Elderfloer cordial</item>
+	            <price>12</price>
+	        </entree>
+	        <entree sales="true">
+	            <item>Virgn Marie</item>
+	            <price>8.00</price>
+	        </entree>
+	        <entree sales="true">
+	            <item>No alcoholic Raspberry Mojito</item>
+	            <price>8.00</price>
+	        </entree>
+	        <entree>
+	            <item>Expresso Martini</item>
+	            <price>12.00</price>
+	        </entree>
+	    </section>
+	    <section name="Snacks">
+	        <entree>
+	            <item>Chips</item>
+	            <price>3.00</price>
+	        </entree>
+	        <entree>
+	            <item>Zucchini Wedges</item>
+	            <price>8.00</price>
+	        </entree>
+	        <entree vegetarian="true">
+	            <item>Sweet Potato Fries with yogurt</item>
+	            <price>8.5</price>
+	        </entree>
+	    </section>
+	</coquitalbarmenu>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
