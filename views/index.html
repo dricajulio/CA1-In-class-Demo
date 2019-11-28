@@ -21,7 +21,9 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Adriana Coquital Bar</a>
+    <img src="./images/logoamoreira.png" alt="leaf" width="120" height="90" left="top"></p>
+      
+      
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -46,20 +48,16 @@
     </div>
   </nav>
 
-<h2>The picture Element</h2>
 
-<picture>
-  <source media="(min-width: 650px)" srcset="./images/coffeebeans_leaf.png">
-  <source media="(min-width: 465px)" srcset="./images/coffee1.png">
-  <img src="./images/coffee_heart.2.png" style="width:auto;">
-</picture>
+
+
 
 <style>
 body {
-  background-image: url('./images/logoamoreira.png');
+  background-image: url("./images/martini3.png");
   background-repeat: no-repeat;
-  background-position: left;
-  background-attachment: scroll;
+  background-position: right;
+  background-attachment: fixed;
 }
 </style>
 
@@ -67,7 +65,7 @@ body {
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-left">
-        <h1 class="mt-5">Adriana Coquital Bar!!</h1>
+        <h1 class="mt-5">A Moreira</h1>
         <p class="lead">Select your entrees from the menu below.</p>
       </div>
         <div id="results" class="col-lg-8 text-center order-3"></div>
@@ -75,7 +73,7 @@ body {
             <form enctype="application/json" action="/post/json" method="post">
                 <div class="form-group">
                     <select class="form-control" name="sec_n">
-                        <option value="0">coffees</option>
+                        <option value="0">coffees</option> 
                         <option value="1">Coktails</option>
                         <option value="2">Snacks</option>
                        
