@@ -6,6 +6,12 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+ body { 
+  background-image: url("./images/logoamoreira.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-attachment: scroll;
+}
 .footer {
   position: absolute;
   bottom: 0;
