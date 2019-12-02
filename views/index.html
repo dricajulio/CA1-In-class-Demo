@@ -90,10 +90,22 @@ body {
 
                    https://www.youtube.com/watch?v=6bKvevjR7GM
                    -->
-                    <input class="form-control" type="text" name="item" placeholder="Item">
+
+                    <script>    
+                     
+                        function textOnly(input) {
+                            var regex = /[^ a-z]/gi;
+                            input.value = input.value.replace(regex, "");
+
+                        }
+                    
+                    </script>
+
+
+                    <input class="form-control" type="text" name="item" onkeyup="textOnly(this)" placeholder="Item">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="number" name="price" placeholder="Price">
+                    <input class="form-control" type="number" name="price" onkeyup="numberOnly(this)"placeholder="Price">
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
             </form>
