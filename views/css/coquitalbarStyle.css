@@ -6,12 +6,6 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
- body { 
-  background-image: url("./images/coffee1.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-attachment: scroll;
-}
 .footer {
   position: absolute;
   bottom: 0;
@@ -31,10 +25,14 @@ table, th, td {
      width:100%;
 }
  td, th {
-     border: 1px solid #999;
+     border: 1px solid #ced4da;
      padding: 0.5rem;
      text-align: left;
 }
  th {
      font-weight: bold;
+}
+.selected {
+            background-color: #c95f6a;
+            color: #FFF;
 }

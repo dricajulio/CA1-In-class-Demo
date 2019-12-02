@@ -9,6 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+
   <title>IWA Demo App</title>
 
   <!-- Bootstrap core CSS -->
@@ -59,6 +60,7 @@ body {
   background-position: right;
   background-attachment: fixed;
 }
+
 </style>
 
   <!-- Page Content -->
@@ -80,10 +82,15 @@ body {
                     </select>
                 </div>
                 <div class="form-group">
+                   <!-- Reference to the form command to allow jusr number on the item and just double in the 
+                   price 
+                   
+                   https://getbootstrap.com/docs/4.3/components/forms/
+                   -->
                     <input class="form-control" type="text" name="item" placeholder="Item">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="price" placeholder="Price">
+                    <input class="form-control" type="number" name="price" placeholder="Price">
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
             </form>
