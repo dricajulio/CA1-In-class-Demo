@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <coquitalbarmenu>
-  <section name="coffees">
+  <section name="Coffees">
     <entree sales="true">
       <item>Americano</item>
       <price>3.00</price>
