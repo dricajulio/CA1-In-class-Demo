@@ -61,7 +61,7 @@ router.post('/post/json', function(req, res) {
     // Function to read in XML file, convert it to JSON, add a new object and write back to XML file
     xmlFileToJs('coquitalbar.xml', function(err, result) {
       if (err) throw (err);
-      result.cafemenu.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price});
+      result.coquitalbarmenu.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price});
       console.log(result);
       jsToXmlFile('coquitalbar.xml', result, function(err) {
         if (err) console.log(err);
@@ -74,6 +74,29 @@ router.post('/post/json', function(req, res) {
 
   // Re-direct the browser back to the page, where the POST request came from
   res.redirect('back');
+
+});
+
+
+// POST request to add to JSON & XML files
+router.post('/post/delete', function(req, res) {
+
+  // Function to read in a JSON file, add to it & convert to XML
+  function deleteJSON(obj) {
+    // Function to read in XML file, convert it to JSON, delete the required object and write back to XML file
+    xmlFileToJs('coquitalbar.xml', function(err, result) {
+      if (err) throw (err);
+      //This is where we delete the object based on the position of the section and position of the entree, as being passed on from index.html
+      delete result.coquitalbarmenu.section[obj.section].entree[obj.entree];
+      //This is where we convert from JSON and write back our XML file
+      jsToXmlFile('coquitalbar.xml', result, function(err) {
+        if (err) console.log(err);
+      })
+    })
+  }
+
+  // Call appendJSON function and pass in body of the current POST request
+  deleteJSON(req.body);
 
 });
 
