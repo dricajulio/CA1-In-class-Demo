@@ -17,6 +17,10 @@
       <item>Expresso</item>
       <price>2.00</price>
     </entree>
+    <entree>
+      <item/>
+      <price>99.00</price>
+    </entree>
   </section>
   <section name="Coktails">
     <entree>

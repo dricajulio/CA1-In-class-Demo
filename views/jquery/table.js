@@ -17,6 +17,17 @@ function draw_table()
 	};
 	$.getJSONuncached("/get/html")
 };
+// function created to force price input two have to accept only decimal places
+//and alllowing Only decimal. If the user insert a no decimal value, the function will reajust the 
+//price for a decimal number
+// Reference link http://bit.ly/2PbhGZ6
+$(document).ready(function(){
+  $('input#pricing').blur(function(){
+    var num = parseFloat($(this).val());
+    var cleanNum = num.toFixed(2);
+    $(this).val(cleanNum);
+  });
+});
 
 function select_row()
 {

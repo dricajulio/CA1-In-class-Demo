@@ -67,7 +67,7 @@ body {
     <div class="row">
       <div class="col-lg-12 text-left">
         <h1 class="mt-5">A Moreira</h1>
-        <p class="lead">Select your entrees from the menu below.</p>
+        <p class="lead">Please select your item:.</p>
       </div>
         <div id="results" class="col-lg-8 text-center order-3"></div>
         <div class="col-lg-4 text-center order-2">
@@ -113,21 +113,23 @@ body {
 
                 <div class="form-group">
                     <!--
-                    I changed the type to number so, any input from the client will have to
-                    be numbers. -->
-                <script>
+                    
+                    It was created a script calling the function setTwoNumberDecimal, where in input class
+                    the type accept is just NUMBER, with min 0, so, it would accept negative number input
+                    from the user side.
+                    step created so user can add price by using the arrow up or down" 
 
-                    function setTwoNumberDecimal(event) {
-                       this.value = parseFloat(this.value).toFixed(2);
-                            }
-                </script>
+                    Reference Link:
+                    https://stackoverflow.com/questions/34057595/allow-2-decimal-places-in-input-type-number/34057881
+                     -->
+               
                 
-                    <input class="form-control" type="number" name="price"  onchange="setTwoNumberDecimal" min="0" placeholder="Price"/>
+                    <input class="form-control" type="number" name="price" step="0.01" id= "pricing" min="0" placeholder="Price"/>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
             </form>
             <button id="delete" class="btn btn-block btn-danger">Delete</button>
-                    <p class="text-muted">To delete an entree, click the required row first</p>
+                    <p class="text-muted">Select the Item, that you would like to delete, and then press the delete bottom</p>
         </div>
     </div>
   </div>
@@ -142,6 +144,7 @@ body {
   <script src="jquery/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="jquery/table.js"></script>
+  
 </body>
 
 </html>
