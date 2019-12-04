@@ -32,6 +32,7 @@ $(document).ready(function(){
 
 // Validation function created to don't allow empty input inside of the item or inside of the price
 // it will generated an alert message, asking the user to entry an item or a price.
+//Reference link: http://bit.ly/2PfOxvQ
 $(document).submit(function() {
     if($("#i").val()== null || $("#i").val() ==""){
         aler('You must entry an Item:');      
