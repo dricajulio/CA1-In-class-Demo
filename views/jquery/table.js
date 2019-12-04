@@ -17,6 +17,7 @@ function draw_table()
 	};
 	$.getJSONuncached("/get/html")
 };
+
 // function created to force price input two have to accept only decimal places
 //and alllowing Only decimal. If the user insert a no decimal value, the function will reajust the 
 //price for a decimal number
@@ -27,6 +28,22 @@ $(document).ready(function(){
     var cleanNum = num.toFixed(2);
     $(this).val(cleanNum);
   });
+});
+
+// Validation function created to don't allow empty input inside of the item or inside of the price
+// it will generated an alert message, asking the user to entry an item or a price.
+$(document).submit(function() {
+    if($("#i").val()== null || $("#i").val() ==""){
+        aler('You must entry an Item:');      
+        return false;
+    }
+
+    
+    if($("#pricing").val()== null || $("#pricing").val() ==""){
+        alert('You must entry a price:');      
+        return false;
+    }
+    
 });
 
 function select_row()

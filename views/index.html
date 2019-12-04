@@ -88,8 +88,8 @@ body {
 
 
                 <div class="form-group">
-                   <!-- Reference Restrict input  command to allow just text in the element item 
-                   price 
+                   <!-- Reference Restrict input command to allow just text in the element item 
+                    
                    
                    https://getbootstrap.com/docs/4.3/components/forms/
 
@@ -106,14 +106,15 @@ body {
                     
                     </script>
 
-
-                    <input class="form-control" type="text" name="item" onkeyup="textOnly(this)" placeholder="Item">
+                    <!-- created a function in table.js to don't accept empty value, the  id=i -->
+            
+                    <input class="form-control" type="text" name="item" id="i"onkeyup="textOnly(this)" placeholder="Item">
                 </div>
 
 
                 <div class="form-group">
                     <!--
-                    
+
                     It was created a script calling the function setTwoNumberDecimal, where in input class
                     the type accept is just NUMBER, with min 0, so, it would accept negative number input
                     from the user side.
