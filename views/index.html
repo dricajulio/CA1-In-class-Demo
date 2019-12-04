@@ -82,6 +82,11 @@ body {
                 </div>
 
 
+
+
+
+
+
                 <div class="form-group">
                    <!-- Reference Restrict input  command to allow just text in the element item 
                    price 
@@ -104,8 +109,20 @@ body {
 
                     <input class="form-control" type="text" name="item" onkeyup="textOnly(this)" placeholder="Item">
                 </div>
+
+
                 <div class="form-group">
-                    <input class="form-control" type="number" name="price" onkeyup="numberOnly(this)"placeholder="Price">
+                    <!--
+                    I changed the type to number so, any input from the client will have to
+                    be numbers. -->
+                <script>
+
+                    function setTwoNumberDecimal(event) {
+                       this.value = parseFloat(this.value).toFixed(2);
+                            }
+                </script>
+                
+                    <input class="form-control" type="number" name="price"  onchange="setTwoNumberDecimal" min="0" placeholder="Price"/>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
             </form>
