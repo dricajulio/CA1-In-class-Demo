@@ -35,13 +35,13 @@ $(document).ready(function(){
 //Reference link: http://bit.ly/2PfOxvQ
 $(document).submit(function() {
     if($("#i").val()== null || $("#i").val() ==""){
-        alert('You must entry an Item:');      
+        alert('You must entree an Item:');      
         return false;
     }
 
     
     if($("#pricing").val()== null || $("#pricing").val() ==""){
-        alert('You must entry a price:');      
+        alert('You must entree a price:');      
         return false;
     }
     

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <coquitalbarmenu>
   <section name="Coffees">
-    <entree sales="true">
-      <item>Americano</item>
-      <price>3.00</price>
-    </entree>
     <entree>
       <item>cappuccino</item>
       <price>3.50</price>
