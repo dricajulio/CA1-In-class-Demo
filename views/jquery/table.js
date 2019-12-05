@@ -35,7 +35,7 @@ $(document).ready(function(){
 //Reference link: http://bit.ly/2PfOxvQ
 $(document).submit(function() {
     if($("#i").val()== null || $("#i").val() ==""){
-        aler('You must entry an Item:');      
+        alert('You must entry an Item:');      
         return false;
     }
 
