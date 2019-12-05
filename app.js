@@ -4,7 +4,9 @@ var http = require('http'),
     fs = require('fs'),
     xmlParse = require('xslt-processor').xmlParse,
     xsltProcess = require('xslt-processor').xsltProcess,
-    xml2js = require('xml2js');
+    xml2js = require('xml2js'),
+    expAutoSan = require('express-autosanitizer');
+
 
 var router = express();
 var server = http.createServer(router);
@@ -12,6 +14,7 @@ var server = http.createServer(router);
 router.use(express.static(path.resolve(__dirname, 'views')));
 router.use(express.urlencoded({extended: true}));
 router.use(express.json());
+router.use(expAutoSan.allUnsafe);
 
 // Function to read in XML file and convert it to JSON
 function xmlFileToJs(filename, cb) {
