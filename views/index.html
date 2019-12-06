@@ -24,8 +24,8 @@
             document.querySelector("#calcBill").addEventListener("click", function() {
                 document.forms[1].txtBillAmt.value = calculateBill('menuTable');
             });
-            document.querySelector("#showVeg").addEventListener("click", function() {
-                highlightVegetarian('menuTable', this.checked);
+            document.querySelector("#showSal").addEventListener("click", function() {
+                highlightSale('menuTable', this.checked);
             });
         });
     </script>
@@ -157,7 +157,7 @@ body {
                         <input type="text" class="form-control" aria-label="Total" name="txtBillAmt">
                          <div class="input-group-append">
                             <div class="input-group-text">
-                                <input type="checkbox" id="showVeg" aria-label="Checkbox for following text input">
+                                <input type="checkbox" id="showSal" aria-label="Checkbox for following text input">
                             </div>
                         </div>
                         <input class="btn btn-block btn-secondary" type="button" name="btnCalcBill" value="Calculate Bill" id="calcBill">

@@ -23,11 +23,11 @@
       <item>Elderfloer cordial</item>
       <price>12.00</price>
     </entree>
-    <entree sales="true">
+    <entree sale="true">
       <item>Virgn Marie</item>
       <price>8.00</price>
     </entree>
-    <entree sales="true">
+    <entree sale="true">
       <item>No alcoholic Raspberry Mojito</item>
       <price>8.00</price>
     </entree>

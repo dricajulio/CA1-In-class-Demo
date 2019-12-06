@@ -22,7 +22,7 @@
                             <xsl:for-each select="entree">
                                 <tr id="{position()}">
                                     <xsl:attribute name="sale">
-                                        <xsl:value-of select="boolean(./@vsale)" />
+                                        <xsl:value-of select="boolean(./@sale)" />
                                     </xsl:attribute>
                                     <td align="center">
                                         <input name="item0" type="checkbox" />
