@@ -15,6 +15,22 @@
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/coquitalbarStyle.css" rel="stylesheet">
+  <script src="js/coquitalbar.js"></script>
+  </script>
+
+    <script>
+        window.addEventListener("load", function() {
+            document.forms[1].txtBillAmt.value = calculateBill('menuTable');
+            document.querySelector("#calcBill").addEventListener("click", function() {
+                document.forms[1].txtBillAmt.value = calculateBill('menuTable');
+            });
+            document.querySelector("#showVeg").addEventListener("click", function() {
+                highlightVegetarian('menuTable', this.checked);
+            });
+        });
+    </script>
+
+
 </head>
 
 <body>
@@ -132,6 +148,22 @@ body {
             </form>
             <button id="delete" class="btn btn-block btn-danger">Delete</button>
                     <p class="text-muted">Select the Item, that you would like to delete, and then press the delete bottom</p>
+
+                    <form>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                                                        <span class="input-group-text">&euro;</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Total" name="txtBillAmt">
+                         <div class="input-group-append">
+                            <div class="input-group-text">
+                                <input type="checkbox" id="showVeg" aria-label="Checkbox for following text input">
+                            </div>
+                        </div>
+                        <input class="btn btn-block btn-secondary" type="button" name="btnCalcBill" value="Calculate Bill" id="calcBill">
+                    </div>
+                    
+                </form>
         </div>
     </div>
   </div>
