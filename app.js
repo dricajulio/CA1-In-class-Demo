@@ -6,7 +6,8 @@ var http = require('http'),
     xsltProcess = require('xslt-processor').xsltProcess,
     xml2js = require('xml2js'),
     expAutoSan = require('express-autosanitizer'),
-    app = express ();
+    mongodb = require('mongodb');
+    
 
 
 var router = express();
