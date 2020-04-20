@@ -10,6 +10,8 @@ var app = express();
 var port = process.env.PORT || 3000;
 var userCtrl = require('./user-controller');
 
+app.get('/users', userCtrl.createUser);
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(require('./routes'));
