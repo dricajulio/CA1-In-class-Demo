@@ -35,6 +35,10 @@
       <item>Expresso Martini</item>
       <price>12.00</price>
     </entree>
+    <entree>
+      <item>Latte</item>
+      <price>3.50</price>
+    </entree>
   </section>
   <section name="Snacks">
     <entree>
