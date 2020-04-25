@@ -24,7 +24,12 @@ app.listen(port, function(err){
     console.log("Listening on Port: " + port)
 });
 
-mongoose.connect(process.env.MONGODB_URL);
+mongoose.connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+});
+
 mongoose.connection.on('error', (err) => { 
     console.log('Mongodb Error: ', err); 
     process.exit();
