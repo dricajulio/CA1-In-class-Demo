@@ -1,39 +1,55 @@
-var logger = require("morgan"),
-cors = require("cors"),
-http = require("http"),
-express = require("express"),
-bodyParser = require("body-parser"),
-mongoose = require('mongoose');
+const express = require("express");//Create the app with express
+const bodyParser = require("body-parser");//create the req. bogy object
+const cors = require("cors");//enable cors (express Middleware)
+const http = require("http");
+const path = require('path');
 require('dotenv').config();
+const app = express();
+let server = http.createServer(app);//create server app
 
-var app = express();
-var port = process.env.PORT || 3000;
-var userCtrl = require('./user-controller');
 
-app.use(logger('dev'));
+// const mongoose = require('mongoose');
+
+let corsOptions = {
+    origin: "http://localhost:3000"
+};
+
+app.use(cors(corsOptions));
+
+// parse requests of content-type - application/json
 app.use(bodyParser.json());
-app.use(require('./routes'));
 
-app.post('/users', userCtrl.createUser);
-app.get('/users', userCtrl.getUsers);
-app.get('/users/:id', userCtrl.getUser);
-app.delete('/users/:id', userCtrl.deleteUser);
-app.put('/users/:id', userCtrl.updateUser);
+// parse requests of content-type - application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.listen(port, function(err){
-    console.log("Listening on Port: " + port)
-});
-
-mongoose.connect(process.env.MONGODB_URL, {
+//conecting to mongoose
+const db = require("./app/models");
+db.mongoose
+.connect(db.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
-});
+})
 
-mongoose.connection.on('error', (err) => { 
+.then('connected', () => { 
+    console.log('MongoDB is successfully connected');
+})
+
+.catch('error', (err) => { 
     console.log('Mongodb Error: ', err); 
     process.exit();
 });
-mongoose.connection.on('connected', () => { 
-    console.log('MongoDB is successfully connected');
+
+
+//simple route
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to this CCT COLLEGE Assignmet." });
+});
+
+require("./app/routes/coquital.routes.js")(app);
+
+// set port, listen for requests
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}.`);
 });
