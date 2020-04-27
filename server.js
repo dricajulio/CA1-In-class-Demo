@@ -1,5 +1,5 @@
 const express = require("express");//Create the app with express
-const bodyParser = require("body-parser");//create the req. bogy object
+const bodyParser = require("body-parser");//create the req. body object
 const cors = require("cors");//enable cors (express Middleware)
 const http = require("http");
 const path = require('path');
